@@ -1,0 +1,56 @@
+{% extends 'index.html' %}
+{% block title %}标签汇总{% endblock %}
+{% block inner-title %}标签汇总{% endblock %}
+{% block article_activate %}active-menu{% endblock %}
+{% block home_activate %}{% endblock %}
+{% block content %}
+<div class="blog">
+	<br/>
+	<div class="container" style="padding-left: 0px">
+		<ul id="myTab" class="nav nav-pills" role='tablist'>
+			{% for tag in tags|slice:":10" %}
+			<li class="{% if tag.id == 1 %}active{% endif %}">
+				<a href="#{{tag.id}}" data-toggle="tab">{{ tag.name }}({{tag.num_posts}})</a>
+			</li>
+			{% endfor %}
+			{% if tags|length > 10 %}
+			<li class="dropdown">
+				<a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown"> ... <b class="caret"></b></a>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+					{% for tag in tags|slice:"10:" %}
+					<li><a href="#{{tag.id}}" data-toggle="tab">{{ tag.name }}({{tag.num_posts}})</a></li>  
+                    {% endfor %}
+				</ul>
+			</li>
+			{% endif %}
+		</ul>
+	</div>
+	<style>
+		.nav-pills>li.active>a,.nav-pills>li.active>a:focus,.nav-pills>li.active>a:hover{
+			background-color: #233342
+		}
+	</style>
+	<br/>
+	<div id="myTabContent" class="tab-content">
+		{% for tag in tags %}
+		<div class="tab-pane fade {% if tag.id == 1 %}in active{% endif %}" id="{{tag.id}}">
+			{% for article in tag.tag_articles.all %}
+			<a href="{% url 'article-details' article.id %}" class="list-group-item">
+       			<h4 class="list-group-item-heading">
+        			{{ article.title }}
+        		</h4>
+	        	<p class="list-group-item-text">
+    	        	{{ article.date }}
+	    		</p>
+			</a>
+			{% endfor %}
+		</div>
+		{% endfor %}
+	</div>
+</div>
+<script>
+	$(function () {
+		$('#myTab li:eq(0) a').tab('show');
+	});
+</script>
+{% endblock %}

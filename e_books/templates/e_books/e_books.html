@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+{% block title %}电子书{% endblock %}
+{% block inner-title %}电子书{% endblock %}
+{% block e_book_activate %}active-menu{% endblock %}
+{% block home_activate %}{% endblock %}
+{% block content %}
+<div class="blog">
+	<br/>
+	{% regroup e_books by kind as kind_list %}
+	{% for kind in kind_list %}
+	<div class="list-group" style="box-shadow: 2px 2px 5px #888888;">
+		<a class="list-group-item active" style="background-color: #414E63; border-color: #414E63">
+			<h4 class="list-group-item-heading">
+				{{ kind.grouper }}
+			</h4>
+		</a>
+		{% for e_book in kind.list %}
+		<a href="/uploads/{{ e_book.fileName }}" class="list-group-item">
+			<h4 class="list-group-item-heading">
+			{{ e_book.title }}
+			</h4>
+			<p class="list-group-item-text">
+				{{ e_book.date }}
+			</p>
+		</a>
+		{% endfor %}
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}		

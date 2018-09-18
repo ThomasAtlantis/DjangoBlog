@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% block title %}
+	<title>Home</title>
+	{% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Great Taste Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+            function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="/static/js/jquery-1.11.1.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,300,700' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        html, body{
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        .leftNav{
+            position: absolute;
+            left: 0;
+            width: 15%;
+            height: 100%;
+            border-right: 1px solid #e5e8ec;
+        }
+        .content{
+            position: absolute;
+            left: 20%;
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div class="leftNav" id="float">
+		<div style="padding:15px;text-align:center;">
+        	<h1><a href="/index">Atlantis</a></h1>
+		</div>
+        <div class="top-nav">
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+                <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                    <nav class="stroke">
+                        <ul class="nav navbar-nav">
+                            <li class="{% block bt_home %}active{% endblock %}"><a href="/index" class="hvr-underline-from-left"><i class="home"></i>Home</a></li>
+                            <li class="{% block bt_gallery %}{% endblock %}"><a href="/photos" class="hvr-underline-from-left"><i class="picture1"></i>Gallery</a></li>
+                            <li class="{% block bt_articles %}{% endblock %}"><a href="/articles" class="hvr-underline-from-left"><i class="edit1"></i>Articles</a></li>
+                            <li class="{% block bt_e_books %}{% endblock %}"><a href="/e_books" class="hvr-underline-from-left"><i class="edit1"></i>E-Books</a></li>
+                            <li class="{% block bt_mail_me %}{% endblock %}"><a href="/mail" class="hvr-underline-from-left"><i class="envelope1"></i>Mail Me</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <script src="/static/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $.fn.smartFloat = function () {
+            var position = function (element) {
+                var top = element.position().top, pos = element.css("position");
+                $(window).scroll(function () {
+                    var scrolls = $(this).scrollTop();
+                    if (scrolls > top) {
+                        if (window.XMLHttpRequest) {
+                            element.css({
+                                position: "fixed",
+                                top: 0
+                            });
+                        } else {
+                            element.css({
+                                top: scrolls
+                            });
+                        }
+                    } else {
+                        element.css({
+                            position: pos,
+                            top: top
+                        });
+                    }
+                });
+            };
+        return $(this).each(function () {
+            position($(this));
+        });
+   };
+   $("#float").smartFloat();
+   </script>
+</body>
+</html>
+

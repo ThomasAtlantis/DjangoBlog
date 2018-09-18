@@ -1,0 +1,93 @@
+{% extends 'index.html' %}
+{% block title %}权力的游戏{% endblock %}
+{% block inner-title %}权力的游戏 {{video_title}}{% endblock %}
+{% block film_activate %}active-menu{% endblock %}
+{% block home_activate %}{% endblock %}
+{% block content %}
+<div class="blog">
+{% if video_url %}
+<iframe width="100%" height="400px" src={{ video_url }} frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe>
+{% endif %}
+<div class="list-group" style="box-shadow: 2px 2px 5px #888888;"><div class="list-group-item active" style="background-color: #414E63; border-color: #414E63"><h4 class="list-group-item-heading">第01季</h4></div>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/5fc31084408a07f4170a4109991b558b' video_title='S01E01' %} style="margin: 5px 0px 5px 10px">S01E01</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/7009013ce4f4fe6dee54211571cc3198' video_title='S01E02' %} style="margin: 5px 0px 5px 10px">S01E02</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/7d50c67063c0736612686f397a294fa4' video_title='S01E03' %} style="margin: 5px 0px 5px 10px">S01E03</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/4ac5aa745798f8e399a28bd6ee7d379c' video_title='S01E04' %} style="margin: 5px 0px 5px 10px">S01E04</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/66ef61e290a84099441f2a95ebfce8d5' video_title='S01E05' %} style="margin: 5px 0px 5px 10px">S01E05</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/172188c0dacb487075bdc0c9afd757b2' video_title='S01E06' %} style="margin: 5px 0px 5px 10px">S01E06</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/dac3de6c87dadcc7bd2c9a8326afc9ac' video_title='S01E07' %} style="margin: 5px 0px 5px 10px">S01E07</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/49ca03822497d26a3943d5084ed59130' video_title='S01E08' %} style="margin: 5px 0px 5px 10px">S01E08</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/1ba3c09ea467bf589e0cc318e3abf3c9' video_title='S01E09' %} style="margin: 5px 0px 5px 10px">S01E09</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/ae385516bf05975c06778418ba30dc0a' video_title='S01E10' %} style="margin: 5px 0px 5px 10px">S01E10</a>
+</div>
+<div class="list-group" style="box-shadow: 2px 2px 5px #888888;"><div class="list-group-item active" style="background-color: #414E63; border-color: #414E63"><h4 class="list-group-item-heading">第02季</h4></div>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/5fd2524092de9576f7341dc9aa5a53ae' video_title='S02E01' %} style="margin: 5px 0px 5px 10px">S02E01</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/6fbcc3ce3f65b647deed9b9e489b584e' video_title='S02E02' %} style="margin: 5px 0px 5px 10px">S02E02</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/9b3faf8981cc8780667e9fa12c5c4b28' video_title='S02E03' %} style="margin: 5px 0px 5px 10px">S02E03</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/0c95e4a579307c6cf93f139e12d62022' video_title='S02E04' %} style="margin: 5px 0px 5px 10px">S02E04</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/cb13de2e50ac695aad8fbfe59e1ba869' video_title='S02E05' %} style="margin: 5px 0px 5px 10px">S02E05</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/e6d71413617dfba7a5ff5b9a7180c007' video_title='S02E06' %} style="margin: 5px 0px 5px 10px">S02E06</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/496cd8b01b0600a185e6156487bf96ed' video_title='S02E07' %} style="margin: 5px 0px 5px 10px">S02E07</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/1f539471127c904e22309f6fa599e98f' video_title='S02E08' %} style="margin: 5px 0px 5px 10px">S02E08</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/7104a226fe65be03fecf10f5bceff8a6' video_title='S02E09' %} style="margin: 5px 0px 5px 10px">S02E09</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/78f41579c50b633ec3c475380260fb61' video_title='S02E10' %} style="margin: 5px 0px 5px 10px">S02E10</a>
+</div>
+<div class="list-group" style="box-shadow: 2px 2px 5px #888888;"><div class="list-group-item active" style="background-color: #414E63; border-color: #414E63"><h4 class="list-group-item-heading">第03季</h4></div>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/f45ab3a13b96528881ffe7a63b547e79' video_title='S03E01' %} style="margin: 5px 0px 5px 10px">S03E01</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/8a9e0b75eccc318e8e449b34f0a56462' video_title='S03E02' %} style="margin: 5px 0px 5px 10px">S03E02</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/37241d744c96e57d29332979a23b8c5c' video_title='S03E03' %} style="margin: 5px 0px 5px 10px">S03E03</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/2f4059dbdef515f7ddf25d1888ec1704' video_title='S03E04' %} style="margin: 5px 0px 5px 10px">S03E04</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/22d0c530efd7037118d2011a68444823' video_title='S03E05' %} style="margin: 5px 0px 5px 10px">S03E05</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/00b682284a10bdccd33c429ec31f4bec' video_title='S03E06' %} style="margin: 5px 0px 5px 10px">S03E06</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/6db812399de3afc15a13018a77f70aed' video_title='S03E07' %} style="margin: 5px 0px 5px 10px">S03E07</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/aa1f5f73327ba40d47ebce155e785aaf' video_title='S03E08' %} style="margin: 5px 0px 5px 10px">S03E08</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/8585939e10dc0d11d37aa63cdeaecdf8' video_title='S03E09' %} style="margin: 5px 0px 5px 10px">S03E09</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/422f010441436ae9511d3e04a6d0d186' video_title='S03E10' %} style="margin: 5px 0px 5px 10px">S03E10</a>
+</div>
+<div class="list-group" style="box-shadow: 2px 2px 5px #888888;"><div class="list-group-item active" style="background-color: #414E63; border-color: #414E63"><h4 class="list-group-item-heading">第04季</h4></div>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/ee6db9134a1add4f17b85c426b019a0d' video_title='S04E01' %} style="margin: 5px 0px 5px 10px">S04E01</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/5125298703cf51ccf35408683be9055c' video_title='S04E02' %} style="margin: 5px 0px 5px 10px">S04E02</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/0e50acc98850803aaa6ab6860f14b84d' video_title='S04E03' %} style="margin: 5px 0px 5px 10px">S04E03</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/fb598cb494b6e98253995d800fab908d' video_title='S04E04' %} style="margin: 5px 0px 5px 10px">S04E04</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/fc60305c9e5e6f19c6be173b9dd7b448' video_title='S04E05' %} style="margin: 5px 0px 5px 10px">S04E05</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/e99298b28ed320343949b7631bebe7e5' video_title='S04E06' %} style="margin: 5px 0px 5px 10px">S04E06</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/5e4df576d1ed58e5990f70848d933758' video_title='S04E07' %} style="margin: 5px 0px 5px 10px">S04E07</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/c333bad2a8b45d3c30902945bd98f699' video_title='S04E08' %} style="margin: 5px 0px 5px 10px">S04E08</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/fd1095d744e5a2ba86ca7a9870aa6730' video_title='S04E09' %} style="margin: 5px 0px 5px 10px">S04E09</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/c54c1353a13f0caf7c9d6fbbf57999f7' video_title='S04E10' %} style="margin: 5px 0px 5px 10px">S04E10</a>
+</div>
+<div class="list-group" style="box-shadow: 2px 2px 5px #888888;"><div class="list-group-item active" style="background-color: #414E63; border-color: #414E63"><h4 class="list-group-item-heading">第05季</h4></div>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/a79c879d28c5c8a4707d52bbaa57607f' video_title='S05E01' %} style="margin: 5px 0px 5px 10px">S05E01</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/50e1781e60d725365a74d585a2734062' video_title='S05E02' %} style="margin: 5px 0px 5px 10px">S05E02</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/be929a31e71b3acf2b3dd3b71c858614' video_title='S05E03' %} style="margin: 5px 0px 5px 10px">S05E03</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/723e8f97fde15f7a8d5ff8d558ea3f16' video_title='S05E04' %} style="margin: 5px 0px 5px 10px">S05E04</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/8b8f66308ee7c3ad5d1031a5721f0753' video_title='S05E05' %} style="margin: 5px 0px 5px 10px">S05E05</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/db33fd3fae645e90637fd0d498958c41' video_title='S05E06' %} style="margin: 5px 0px 5px 10px">S05E06</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/18c3714df31f8ad15df9a76f18179fc5' video_title='S05E07' %} style="margin: 5px 0px 5px 10px">S05E07</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/8b910e56415eb6bd1037b46e6e619c58' video_title='S05E08' %} style="margin: 5px 0px 5px 10px">S05E08</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/de56596363329673fab1b93be2210df7' video_title='S05E09' %} style="margin: 5px 0px 5px 10px">S05E09</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/d95935d7d6fbe4895b69f61eaebfc247' video_title='S05E10' %} style="margin: 5px 0px 5px 10px">S05E10</a>
+</div>
+<div class="list-group" style="box-shadow: 2px 2px 5px #888888;"><div class="list-group-item active" style="background-color: #414E63; border-color: #414E63"><h4 class="list-group-item-heading">第06季</h4></div>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/16d8a58d14a62420c9a1cbc088035e31' video_title='S06E01' %} style="margin: 5px 0px 5px 10px">S06E01</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/25d0a45ccd9e33b6b1ef8760801b6841' video_title='S06E02' %} style="margin: 5px 0px 5px 10px">S06E02</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/60be21f3ebf28ff7b8a692a752d92cf8' video_title='S06E03' %} style="margin: 5px 0px 5px 10px">S06E03</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/f4fce05b7e6af04c39a65a97418bb529' video_title='S06E04' %} style="margin: 5px 0px 5px 10px">S06E04</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/44d88dac3da240ef83bff8bdfd61b9aa' video_title='S06E05' %} style="margin: 5px 0px 5px 10px">S06E05</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/7495bfe3bcb0defae0b795cb11c19e13' video_title='S06E06' %} style="margin: 5px 0px 5px 10px">S06E06</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/6d9bffd3b6ec26412982e430b6665605' video_title='S06E07' %} style="margin: 5px 0px 5px 10px">S06E07</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/c35a4c435947597d8ba9718c4d7d6643' video_title='S06E08' %} style="margin: 5px 0px 5px 10px">S06E08</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/a41acbd3ffd616b5fd306761bb865d23' video_title='S06E09' %} style="margin: 5px 0px 5px 10px">S06E09</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/62752c5f9ee3bf051713cd8db0961616' video_title='S06E10' %} style="margin: 5px 0px 5px 10px">S06E10</a>
+</div>
+<div class="list-group" style="box-shadow: 2px 2px 5px #888888;"><div class="list-group-item active" style="background-color: #414E63; border-color: #414E63"><h4 class="list-group-item-heading">第07季</h4></div>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/3d73b94a1b27fbac9fcf22ed243127e3' video_title='S07E01' %} style="margin: 5px 0px 5px 10px">S07E01</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/7cecfe41e1394109d7b8620ca3926166' video_title='S07E02' %} style="margin: 5px 0px 5px 10px">S07E02</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/887c5a2b0d1bcf5b169ac8d63806bd13' video_title='S07E03' %} style="margin: 5px 0px 5px 10px">S07E03</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/a159b2e2c6b3cb7bf0e92eb43fe27bdd' video_title='S07E04' %} style="margin: 5px 0px 5px 10px">S07E04</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/a1d4643376bf11b37c51f5c76fcaff79' video_title='S07E05' %} style="margin: 5px 0px 5px 10px">S07E05</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/0a94eea42ecd117d87eb79c61bdd656e' video_title='S07E06' %} style="margin: 5px 0px 5px 10px">S07E06</a>
+<a class ="btn btn-flat btn-h" href={% url 'gameofthrone' video_url='http://youku.com-www-163.com/share/366c97caa1e66d39a0c21edb8fdc9caf' video_title='S07E07' %} style="margin: 5px 0px 5px 10px">S07E07</a>
+
+</div>
+{% endblock %}

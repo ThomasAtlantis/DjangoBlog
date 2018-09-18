@@ -1,0 +1,140 @@
+{% extends 'index.html' %}
+{% block title %}{{ article.title }}{% endblock %}
+{% block inner-title %}{{ article.title }}{% endblock %}
+{% block article_activate %}active-menu{% endblock %}
+{% block home_activate %}{% endblock %}
+{% block content %}
+	<div class="gallery-head">
+		<h4>{{ article.date }}</h4>
+		<br/>
+	</div>
+	<div class="card" style="padding: 20px;">
+		<div class="blog">
+			{{ article.body | safe }}
+		</div>
+	</div>
+	{% block comments %}
+	<style>
+	#comment-submit {
+		position: absolute;
+        right: -2px;
+        bottom: -2px;
+        background: #3399CC;
+        border: none;
+        border: 2px solid;
+        border-color: #3399CC;
+        border-left: none;
+        border-top: none;
+        padding: 0px;
+        width: 100px;
+        height: 38px;
+        color: #FFF;
+        outline: 0;
+        border-radius: 0 0 2px 0;
+        font-size: 16px;
+        z-index: 6;
+    }
+    #comment-submit:hover {
+        background: #FBFBFB;
+        border-color: #CCD4D9;
+        color: #3399CC;
+        border-top: solid 1px #F2F2F2;
+    }
+    .comment-box {
+        border: 2px solid #CCD4D9;
+        border-radius: 2px;
+        padding: 4px 4px 0px;
+        background-color: #FFF;
+        position: relative;
+        z-index: 10;
+    }
+    #comment-textarea {
+        width: 100%;
+        resize: none;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border: none;
+        line-height: 22px;
+        font-size: 14px;
+        outline: 0;
+        color: #666;
+        height: 68px;
+    }
+    .comment-ctrl {
+        background-color: #FBFBFB;
+        height: 36px;
+	    margin-left: -4px;
+        border-top: solid 1px #F2F2F2;
+        z-index: 5;
+    }
+    .comment-prompt {
+        cursor: pointer;
+        display: none;
+        text-align: center;
+        font-size: 14px;
+        line-height: 38px;
+        color: #3399CC;
+    }
+    .comment-success {
+        cursor: pointer;
+        display: none;
+        text-align: center;
+        font-size: 14px;
+        line-height: 38px;
+        color: #3399CC;
+    }
+    .comment-f {
+        position: absolute;
+        right: 0;
+        font-size: 16px;
+        color: #ccc;
+    }
+    .comment-main {
+        margin-left: 5px;
+        margin-right: 30px;
+        color: #888;
+        line-height: 22px;
+        position: relative;
+        font-size: 14px;
+        padding: 0 0 15px;
+        word-wrap: break-word;
+        max-height: 300px;
+        overflow: hidden;
+    }
+    #respond, #postcomments {
+        position: relative;
+    }
+    ol#comment_list {
+        padding-left: 0;
+    }
+    div#postcomments {
+    	margin-top: 20px;
+    }
+    </style>
+	<div class="card" style="padding: 20px;">
+    	<div class="title" id="comment">
+    		<h3>评论</h3>
+    	</div>
+    	<div id="respond">
+    		<form id="comment-form" name="comment-form" action="" method="POST">
+    			<div class="comment">
+    				<input name="" id="" class="form-control" size="22" placeholder="您的昵称（必填）" maxlength="15" autocomplete="off" tabindex="1" type="text">
+    				<div class="comment-box">
+    					<textarea placeholder="您的评论或留言（必填）" name="comment-textarea" id="comment-textarea" cols="100%" rows="3" tabindex="3"></textarea>
+    					<div class="comment-ctrl">
+    						<div class="comment-prompt" style="display: none;"> <i class="fa fa-spin fa-circle-o-notch"></i> <span class="comment-prompt-text">评论正在提交中...请稍后</span> </div>
+    						<div class="comment-success" style="display: none;"> <i class="fa fa-check"></i> <span class="comment-prompt-text">评论提交成功...</span> </div>
+    						<button type="submit" name="comment-submit" id="comment-submit" tabindex="4">评论</button>
+    					</div>
+    				</div>
+    			</div>
+    		</form>
+    	</div>
+    	<div id="postcomments">
+    		<ol id="comment_list" class="commentlist">        
+    		<li class="comment-content"><span class="comment-f">#2</span><div class="comment-main"><p><a class="address" href="#" rel="nofollow" target="_blank" draggable="false">木庄网络博客</a><span class="time">(2016/10/28 11:41:03)</span><br>不错的网站主题，看着相当舒服</p></div></li>
+    		<li class="comment-content"><span class="comment-f">#1</span><div class="comment-main"><p><a class="address" href="#" rel="nofollow" target="_blank" draggable="false">木庄网络博客</a><span class="time">(2016/10/14 21:02:39)</span><br>博客做得好漂亮哦！</p></div></li></ol>
+    	</div>
+    </div>
+	{% endblock comments %}
+{% endblock content %}

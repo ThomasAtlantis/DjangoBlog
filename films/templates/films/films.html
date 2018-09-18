@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+{% block title %}影视剧{% endblock %}
+{% block inner-title %}影视列表{% endblock %}
+{% block film_activate %}active-menu{% endblock %}
+{% block home_activate %}{% endblock %}
+{% block content %}
+<div class="blog">
+    <br/>
+    <div class="list-group" style="box-shadow: 2px 2px 5px #888888;">
+        <a class="list-group-item active" style="background-color: #414E63; border-color: #414E63">
+            <h4 class="list-group-item-heading">
+            英剧美剧
+			</h4>
+        </a>
+        <div class="list-group-item">
+        <h4 class="list-group-item-heading">
+            <a href="/films/bigbangtheory" style="color: #000000">生活大爆炸</a>
+            <a href="https://baike.baidu.com/item/%E7%94%9F%E6%B4%BB%E5%A4%A7%E7%88%86%E7%82%B8/9927034?fr=aladdin" target=new>
+            <span class="float-right badge bg-primary" style="background-color: #414E63; border-radius: 5px; color: #FFFFFF ">查看简介</span></a>
+        </h4>
+        </div>
+        <div class="list-group-item">
+        <h4 class="list-group-item-heading">
+            <a href="/films/gameofthrone" style="color: #000000">权力的游戏</a>
+            <a href="https://baike.baidu.com/item/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F/70073?fr=aladdin" target=new>
+            <span class="float-right badge bg-primary" style="background-color: #414E63; border-radius: 5px; color: #FFFFFF ">查看简介</span></a>
+         </h4>
+         </div>
+    </div>
+ 
+	{% regroup films by kind as kind_list %}
+    {% for kind in kind_list %}
+    <div class="list-group" style="box-shadow: 2px 2px 5px #888888;">
+        <a class="list-group-item active" style="background-color: #414E63; border-color: #414E63">
+            <h4 class="list-group-item-heading">
+                {{ kind.grouper }}
+            </h4>
+        </a>
+        {% for film in kind.list %}
+		<div class="list-group-item">
+		<h4 class="list-group-item-heading">
+        	<a href="{{ film.video_url }}" target=new style="color: #000000">{{ film.title }}</a>
+			<a href="{{ film.introduction_url }}" target=new>
+			<span class="float-right badge bg-primary" style="background-color: #414E63; border-radius: 5px; color: #FFFFFF ">查看简介</span></a>
+		</h4>
+		</div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+

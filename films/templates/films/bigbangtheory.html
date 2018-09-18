@@ -1,0 +1,263 @@
+{% extends 'index.html' %}
+{% block title %}生活大爆炸{% endblock %}
+{% block inner-title %}生活大爆炸 {{video_title}}{% endblock %}
+{% block film_activate %}active-menu{% endblock %}
+{% block home_activate %}{% endblock %}
+{% block content %}
+<div class="blog">
+{% if video_url %}
+<iframe width="100%" height="400px" src={{ video_url }} frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe>
+{% endif %}
+<div class="list-group" style="box-shadow: 2px 2px 5px #888888;"><div class="list-group-item active" style="background-color: #414E63; border-color: #414E63"><h4 class="list-group-item-heading">第01季</h4></div>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/9cdf26568d166bc6793ef8da5afa0846' video_title='S01E01' %} style="margin: 5px 0px 5px 10px">S01E01</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/670eca4ad5de0e0cfcc60ab3dd008095' video_title='S01E02' %} style="margin: 5px 0px 5px 10px">S01E02</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/483d8df877b31405c1e8fe4247f02d86' video_title='S01E03' %} style="margin: 5px 0px 5px 10px">S01E03</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/a17479231dc298309a3fda7d7d00111a' video_title='S01E04' %} style="margin: 5px 0px 5px 10px">S01E04</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/a2369958a9645eac52b58a8134e2ef5a' video_title='S01E05' %} style="margin: 5px 0px 5px 10px">S01E05</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/d3ab9b41f98222ad7b5ff8a822172796' video_title='S01E06' %} style="margin: 5px 0px 5px 10px">S01E06</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/0023a1e3447fdb31836536cc903f1310' video_title='S01E07' %} style="margin: 5px 0px 5px 10px">S01E07</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/7b9d31aa17b849b238ab79cef0733041' video_title='S01E08' %} style="margin: 5px 0px 5px 10px">S01E08</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/342b5fe6486788799659c39bbfc3fa02' video_title='S01E09' %} style="margin: 5px 0px 5px 10px">S01E09</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/1ce9168a60deae4a994dbd5b2d145699' video_title='S01E10' %} style="margin: 5px 0px 5px 10px">S01E10</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/24064e6576a74af1b8eda89277c6b659' video_title='S01E11' %} style="margin: 5px 0px 5px 10px">S01E11</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/210192abc6dd9b4f53d7ba4926461e86' video_title='S01E12' %} style="margin: 5px 0px 5px 10px">S01E12</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/73c730319cf839f143bf40954448ce39' video_title='S01E13' %} style="margin: 5px 0px 5px 10px">S01E13</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/c1722a7941d61aad6e651a35b65a9c3e' video_title='S01E14' %} style="margin: 5px 0px 5px 10px">S01E14</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/f702defbc67edb455949f46babab0c18' video_title='S01E15' %} style="margin: 5px 0px 5px 10px">S01E15</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/93a27b0bd99bac3e68a440b48aa421ab' video_title='S01E16' %} style="margin: 5px 0px 5px 10px">S01E16</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/7b8bc3700ce886e8627f41e799fe764f' video_title='S01E17' %} style="margin: 5px 0px 5px 10px">S01E17</a>
+</div>
+<div class="list-group" style="box-shadow: 2px 2px 5px #888888;"><div class="list-group-item active" style="background-color: #414E63; border-color: #414E63"><h4 class="list-group-item-heading">第02季</h4></div>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/dfb8e1450abdf50cc0f260e0e7a62296' video_title='S02E01' %} style="margin: 5px 0px 5px 10px">S02E01</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/edfccb5cf44f7c2c385f8d4470117a0d' video_title='S02E02' %} style="margin: 5px 0px 5px 10px">S02E02</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/c0a0756dd0a93eb7c840fdeb3c65808e' video_title='S02E03' %} style="margin: 5px 0px 5px 10px">S02E03</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/d6d0f445ef4338aba648d1a13936743c' video_title='S02E04' %} style="margin: 5px 0px 5px 10px">S02E04</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/70876df606415b050df59005c3cff238' video_title='S02E05' %} style="margin: 5px 0px 5px 10px">S02E05</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/a952ddeda0b7e2c20744e52e728e5594' video_title='S02E06' %} style="margin: 5px 0px 5px 10px">S02E06</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/d36cad380b069785900bcfd258bdecea' video_title='S02E07' %} style="margin: 5px 0px 5px 10px">S02E07</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/1662d1307aaa81230b651ecf00d27180' video_title='S02E08' %} style="margin: 5px 0px 5px 10px">S02E08</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/edf959e1c2188ad869e9cf0294c53c8c' video_title='S02E09' %} style="margin: 5px 0px 5px 10px">S02E09</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/8eb4b4c01bf3375828c5494c2f6e7685' video_title='S02E10' %} style="margin: 5px 0px 5px 10px">S02E10</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/d87d3902e1c4efdc9d79e94c4921bb40' video_title='S02E11' %} style="margin: 5px 0px 5px 10px">S02E11</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/0b32f1a9efe5edf3dd2f38b0c0052bfe' video_title='S02E12' %} style="margin: 5px 0px 5px 10px">S02E12</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/c589c3a8f99401b24b9380e86d939842' video_title='S02E13' %} style="margin: 5px 0px 5px 10px">S02E13</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/db261d4f615f0e982983be499e57ccda' video_title='S02E14' %} style="margin: 5px 0px 5px 10px">S02E14</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/1e9491470749d5b0e361ce4f0b24d037' video_title='S02E15' %} style="margin: 5px 0px 5px 10px">S02E15</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/8eddb3797212cedc470043e1d3686176' video_title='S02E16' %} style="margin: 5px 0px 5px 10px">S02E16</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/1379719828be9ee6b08ca64edb818e2b' video_title='S02E17' %} style="margin: 5px 0px 5px 10px">S02E17</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/a56ee48e5c142c26cf645b2cc23d78fc' video_title='S02E18' %} style="margin: 5px 0px 5px 10px">S02E18</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/7a55fb8503583f7451544623e3f75f93' video_title='S02E19' %} style="margin: 5px 0px 5px 10px">S02E19</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/8944871f1c9865a77a3d9c92cadf124d' video_title='S02E20' %} style="margin: 5px 0px 5px 10px">S02E20</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/617974172720b96de92525536de581fa' video_title='S02E21' %} style="margin: 5px 0px 5px 10px">S02E21</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/47c917b09f2bc64b2916c0824c715923' video_title='S02E22' %} style="margin: 5px 0px 5px 10px">S02E22</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/bcd0049c35799cdf57d06eaf2eb3cff6' video_title='S02E23' %} style="margin: 5px 0px 5px 10px">S02E23</a>
+</div>
+<div class="list-group" style="box-shadow: 2px 2px 5px #888888;"><div class="list-group-item active" style="background-color: #414E63; border-color: #414E63"><h4 class="list-group-item-heading">第03季</h4></div>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/ce9a6fb2becc2d235e62b125e9260102' video_title='S03E01' %} style="margin: 5px 0px 5px 10px">S03E01</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/76d0baca6075c45cd8a3a55fa6a23c05' video_title='S03E02' %} style="margin: 5px 0px 5px 10px">S03E02</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/ff1e68e74c6b16a1a7b5d958b95e120c' video_title='S03E03' %} style="margin: 5px 0px 5px 10px">S03E03</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/3882c5a9869d86def6b7be879605522e' video_title='S03E04' %} style="margin: 5px 0px 5px 10px">S03E04</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/e8219d4c93f6c55c6b10fe6bfe997c6c' video_title='S03E05' %} style="margin: 5px 0px 5px 10px">S03E05</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/6072cd1424d62d9c33c6a7a82cacd40e' video_title='S03E06' %} style="margin: 5px 0px 5px 10px">S03E06</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/08d562c1eedd30b15b51e35d8486d14c' video_title='S03E07' %} style="margin: 5px 0px 5px 10px">S03E07</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/d2cb583f4b5bdc51b965ae555ee6bca5' video_title='S03E08' %} style="margin: 5px 0px 5px 10px">S03E08</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/c63a5650dcd0bf04b35bd712466010bc' video_title='S03E09' %} style="margin: 5px 0px 5px 10px">S03E09</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/10fa5eb83300e5f592b9b35a0e07fc3f' video_title='S03E10' %} style="margin: 5px 0px 5px 10px">S03E10</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/b2fb19fe374529d3658197da0657ab0c' video_title='S03E11' %} style="margin: 5px 0px 5px 10px">S03E11</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/329d1ea6acb272924f991d523b2d2b80' video_title='S03E12' %} style="margin: 5px 0px 5px 10px">S03E12</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/7c127e0c66f06e58c7c7310a7c6fa488' video_title='S03E13' %} style="margin: 5px 0px 5px 10px">S03E13</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/4ccea3161064506dda8e0c9fd416d1ae' video_title='S03E14' %} style="margin: 5px 0px 5px 10px">S03E14</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/0f6b1f657ac30ab76519ed4c677e9909' video_title='S03E15' %} style="margin: 5px 0px 5px 10px">S03E15</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/2a8009525763356ad5e3bb48b7475b4d' video_title='S03E16' %} style="margin: 5px 0px 5px 10px">S03E16</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/f250daff6a09865ff432821b2adac54f' video_title='S03E17' %} style="margin: 5px 0px 5px 10px">S03E17</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/6d38b80c1da3bd9d8717ce47fea2acd7' video_title='S03E18' %} style="margin: 5px 0px 5px 10px">S03E18</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/425f116bf53f051c57d1670a04fb4a0c' video_title='S03E19' %} style="margin: 5px 0px 5px 10px">S03E19</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/d30cfe3deca3ec4de141fcf9c31097a3' video_title='S03E20' %} style="margin: 5px 0px 5px 10px">S03E20</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/9c16b0e83f09596202f402261f25c8a9' video_title='S03E21' %} style="margin: 5px 0px 5px 10px">S03E21</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/997e65474a248252883b485717f7d098' video_title='S03E22' %} style="margin: 5px 0px 5px 10px">S03E22</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/827a9e878169d065f4a9a6c451ba0207' video_title='S03E23' %} style="margin: 5px 0px 5px 10px">S03E23</a>
+</div>
+<div class="list-group" style="box-shadow: 2px 2px 5px #888888;"><div class="list-group-item active" style="background-color: #414E63; border-color: #414E63"><h4 class="list-group-item-heading">第04季</h4></div>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/eccd9f7dc92858b741132fda313130cf' video_title='S04E01' %} style="margin: 5px 0px 5px 10px">S04E01</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/d843407a1a701630bb297c1148229eff' video_title='S04E02' %} style="margin: 5px 0px 5px 10px">S04E02</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/1759e864edd6cb2200926b3a2f729dac' video_title='S04E03' %} style="margin: 5px 0px 5px 10px">S04E03</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/eeb29740e8e9bcf14dc26c2fff8cca81' video_title='S04E04' %} style="margin: 5px 0px 5px 10px">S04E04</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/a536fb5480db8bdbb84daffe345c675b' video_title='S04E05' %} style="margin: 5px 0px 5px 10px">S04E05</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/d6f8d124087ad4c23fe66b89b7893523' video_title='S04E06' %} style="margin: 5px 0px 5px 10px">S04E06</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/7fbfc161a3b873bf2119c788ed93d1f4' video_title='S04E07' %} style="margin: 5px 0px 5px 10px">S04E07</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/bef4d169d8bddd17d68303877a3ea945' video_title='S04E08' %} style="margin: 5px 0px 5px 10px">S04E08</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/e4191d610537305de1d294adb121b513' video_title='S04E09' %} style="margin: 5px 0px 5px 10px">S04E09</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/b59c21a078fde074a6750e91ed19fb21' video_title='S04E10' %} style="margin: 5px 0px 5px 10px">S04E10</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/27bc42aaeb1540e87949a69ebeb4eb4c' video_title='S04E11' %} style="margin: 5px 0px 5px 10px">S04E11</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/999df4ce78b966de17aee1dc87111044' video_title='S04E12' %} style="margin: 5px 0px 5px 10px">S04E12</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/e7ba053d8ba932b77348b3987ea0e40b' video_title='S04E13' %} style="margin: 5px 0px 5px 10px">S04E13</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/e64928412aae022e2c27456df62dda09' video_title='S04E14' %} style="margin: 5px 0px 5px 10px">S04E14</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/7fe3d16a83f683a0a7f1c029536bebe7' video_title='S04E15' %} style="margin: 5px 0px 5px 10px">S04E15</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/f892447540d0e840049183faa3109b1b' video_title='S04E16' %} style="margin: 5px 0px 5px 10px">S04E16</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/c9f2f917078bd2db12f23c3b413d9cba' video_title='S04E17' %} style="margin: 5px 0px 5px 10px">S04E17</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/41bacf567aefc61b3076c74d8925128f' video_title='S04E18' %} style="margin: 5px 0px 5px 10px">S04E18</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/ffa4eb0e32349ae57f7a0ee8c7cd7c11' video_title='S04E19' %} style="margin: 5px 0px 5px 10px">S04E19</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/955fd82131e15e7b5199cbc8f983306a' video_title='S04E20' %} style="margin: 5px 0px 5px 10px">S04E20</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/792dd774336314c3c27a04bb260cf2cf' video_title='S04E21' %} style="margin: 5px 0px 5px 10px">S04E21</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/a4982cba8b4cbeb32a439f0367273fc8' video_title='S04E22' %} style="margin: 5px 0px 5px 10px">S04E22</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/530ad673015b98fcf4cdd5a68cb93d6c' video_title='S04E23' %} style="margin: 5px 0px 5px 10px">S04E23</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/1aab7baa714e14868fe9eac65fcbd315' video_title='S04E24' %} style="margin: 5px 0px 5px 10px">S04E24</a>
+</div>
+<div class="list-group" style="box-shadow: 2px 2px 5px #888888;"><div class="list-group-item active" style="background-color: #414E63; border-color: #414E63"><h4 class="list-group-item-heading">第05季</h4></div>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/4910fcdaedc2be5c5f05533b7a9cb8c2' video_title='S05E01' %} style="margin: 5px 0px 5px 10px">S05E01</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/cc2b1ba0368ccd98d5bed7e2e97b4bb0' video_title='S05E02' %} style="margin: 5px 0px 5px 10px">S05E02</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/657e31ff3231b847d7604f6647a2dfc9' video_title='S05E03' %} style="margin: 5px 0px 5px 10px">S05E03</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/7e0ff37942c2de60cbcbd27041196ce3' video_title='S05E04' %} style="margin: 5px 0px 5px 10px">S05E04</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/2e5050938e0df629a2f2c5ff24fe66c6' video_title='S05E05' %} style="margin: 5px 0px 5px 10px">S05E05</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/11ed516444b2593eaba7f2c2bb63483e' video_title='S05E06' %} style="margin: 5px 0px 5px 10px">S05E06</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/70803c1acb1ee113c07ec6bddc4929bd' video_title='S05E07' %} style="margin: 5px 0px 5px 10px">S05E07</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/2754518221cfbc8d25c13a06a4cb8421' video_title='S05E08' %} style="margin: 5px 0px 5px 10px">S05E08</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/96e76211d21b66fbdaf1a05498b4417a' video_title='S05E09' %} style="margin: 5px 0px 5px 10px">S05E09</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/ebd774c929a7f6c7e5df19e355f61e23' video_title='S05E10' %} style="margin: 5px 0px 5px 10px">S05E10</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/725215ed82ab6306919b485b81ff9615' video_title='S05E11' %} style="margin: 5px 0px 5px 10px">S05E11</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/9b22a40256b079f338827b0ff1f4792b' video_title='S05E12' %} style="margin: 5px 0px 5px 10px">S05E12</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/c5f79d384b8024d5adddb872f9651f38' video_title='S05E13' %} style="margin: 5px 0px 5px 10px">S05E13</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/c1aff6753244c6ee93d489992b51f012' video_title='S05E14' %} style="margin: 5px 0px 5px 10px">S05E14</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/5e62c1998206e0110459a6143546fe2e' video_title='S05E15' %} style="margin: 5px 0px 5px 10px">S05E15</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/6412121cbb2dc2cb9e460cfee7046be2' video_title='S05E16' %} style="margin: 5px 0px 5px 10px">S05E16</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/afc2637129ad904485e07d2c0e6b0688' video_title='S05E17' %} style="margin: 5px 0px 5px 10px">S05E17</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/42edd1ec1dc5f5c1f11fd74a959e96c9' video_title='S05E18' %} style="margin: 5px 0px 5px 10px">S05E18</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/69f8ea31de0c00502b2ae571fbab1f95' video_title='S05E19' %} style="margin: 5px 0px 5px 10px">S05E19</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/4392e631da381761421d5e1e0c3de25f' video_title='S05E20' %} style="margin: 5px 0px 5px 10px">S05E20</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/b219f59c2dd596abfadbcecfc2277659' video_title='S05E21' %} style="margin: 5px 0px 5px 10px">S05E21</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/c0c3a9fb8385d8e03a46adadde9af3bf' video_title='S05E22' %} style="margin: 5px 0px 5px 10px">S05E22</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/ee51fce06e2c58e0cac874de44b57035' video_title='S05E23' %} style="margin: 5px 0px 5px 10px">S05E23</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/018a1b6ccd2ec81361657e259155895a' video_title='S05E24' %} style="margin: 5px 0px 5px 10px">S05E24</a>
+</div>
+<div class="list-group" style="box-shadow: 2px 2px 5px #888888;"><div class="list-group-item active" style="background-color: #414E63; border-color: #414E63"><h4 class="list-group-item-heading">第06季</h4></div>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/253d812cbfbb77c03b910f9897e9487d' video_title='S06E01' %} style="margin: 5px 0px 5px 10px">S06E01</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/ee4117572afbc0cf760f70714af0ec52' video_title='S06E02' %} style="margin: 5px 0px 5px 10px">S06E02</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/23b702c4c421ddb2d023fee968c0d839' video_title='S06E03' %} style="margin: 5px 0px 5px 10px">S06E03</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/c876914f82ce54cb533b186afd41166e' video_title='S06E04' %} style="margin: 5px 0px 5px 10px">S06E04</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/995ca733e3657ff9f5f3c823d73371e1' video_title='S06E05' %} style="margin: 5px 0px 5px 10px">S06E05</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/ac2d43ef3f26cc74de242202e822ecb0' video_title='S06E06' %} style="margin: 5px 0px 5px 10px">S06E06</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/6dfc35c47756e962ef055d1049f1f8ec' video_title='S06E07' %} style="margin: 5px 0px 5px 10px">S06E07</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/696b0709b9a2d7d9e2c25b71476ec255' video_title='S06E08' %} style="margin: 5px 0px 5px 10px">S06E08</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/f53eb4122d5e2ce81a12093f8f9ce922' video_title='S06E09' %} style="margin: 5px 0px 5px 10px">S06E09</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/abf0931987f2f8eb7a8d26f2c21fe172' video_title='S06E10' %} style="margin: 5px 0px 5px 10px">S06E10</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/4c0a7bdd46ceb88d497eec5de360328e' video_title='S06E11' %} style="margin: 5px 0px 5px 10px">S06E11</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/74105d373a71b517ed650caabb9c2cb8' video_title='S06E12' %} style="margin: 5px 0px 5px 10px">S06E12</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/c4b8bb990423f770dd7f26ff79168416' video_title='S06E13' %} style="margin: 5px 0px 5px 10px">S06E13</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/cc298d5bc587e1b650f80e10449ee9d5' video_title='S06E14' %} style="margin: 5px 0px 5px 10px">S06E14</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/f80b8c0b896704df03fb6525733de179' video_title='S06E15' %} style="margin: 5px 0px 5px 10px">S06E15</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/47a85128570a3482beea9592a3cc7ffb' video_title='S06E16' %} style="margin: 5px 0px 5px 10px">S06E16</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/70bb83c9272e6c4bc6e83e0a55c7c9c3' video_title='S06E17' %} style="margin: 5px 0px 5px 10px">S06E17</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/712a67567ec10c52c2b966224cf94d1e' video_title='S06E18' %} style="margin: 5px 0px 5px 10px">S06E18</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/e52ff15f1c6cff78c4e54fd19026256d' video_title='S06E19' %} style="margin: 5px 0px 5px 10px">S06E19</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/0678c572b0d5597d2d4a6b5bd135754c' video_title='S06E20' %} style="margin: 5px 0px 5px 10px">S06E20</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/67baaa05759c5f8da208f540ff782a5f' video_title='S06E21' %} style="margin: 5px 0px 5px 10px">S06E21</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/c45ae64fa263499a6f605b9ee351c7d2' video_title='S06E22' %} style="margin: 5px 0px 5px 10px">S06E22</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/7d37940a0260eac65b7a04df9f8abeaf' video_title='S06E23' %} style="margin: 5px 0px 5px 10px">S06E23</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/dba84d00c3a33df9f3bfb902940249ca' video_title='S06E24' %} style="margin: 5px 0px 5px 10px">S06E24</a>
+</div>
+<div class="list-group" style="box-shadow: 2px 2px 5px #888888;"><div class="list-group-item active" style="background-color: #414E63; border-color: #414E63"><h4 class="list-group-item-heading">第07季</h4></div>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/8466f9ace6a9acbe71f75762ffc890f1' video_title='S07E01' %} style="margin: 5px 0px 5px 10px">S07E01</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/4317fd49a21384c85f6b405cba038e21' video_title='S07E02' %} style="margin: 5px 0px 5px 10px">S07E02</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/17df67628bb89193838f83015a3e7d30' video_title='S07E03' %} style="margin: 5px 0px 5px 10px">S07E03</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/b282d1735283e8eea45bce393cefe265' video_title='S07E04' %} style="margin: 5px 0px 5px 10px">S07E04</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/771f8512d26b406d003adb901e3bfc6a' video_title='S07E05' %} style="margin: 5px 0px 5px 10px">S07E05</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/ca810d7772367ff95527e3f9ab5e6814' video_title='S07E06' %} style="margin: 5px 0px 5px 10px">S07E06</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/05298fdb6c0c3d665cea702d1f85acda' video_title='S07E07' %} style="margin: 5px 0px 5px 10px">S07E07</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/4d22136ec8f25b566fdd61bc0d5045b4' video_title='S07E08' %} style="margin: 5px 0px 5px 10px">S07E08</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/cc26f87f3f9f7c0fbf2d36ad880a9a4e' video_title='S07E09' %} style="margin: 5px 0px 5px 10px">S07E09</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/1b2bae9eed46f0f6d38fdf582952f3b1' video_title='S07E10' %} style="margin: 5px 0px 5px 10px">S07E10</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/85c9f9efab89cee90a95cb98f15feacd' video_title='S07E11' %} style="margin: 5px 0px 5px 10px">S07E11</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/d733a2026011136dc23a005c530aa62f' video_title='S07E12' %} style="margin: 5px 0px 5px 10px">S07E12</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/50d2e70cdf7dd05be85e1b8df3f8ced4' video_title='S07E13' %} style="margin: 5px 0px 5px 10px">S07E13</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/7a1bb1ae4894617e33fe25166afca9d9' video_title='S07E14' %} style="margin: 5px 0px 5px 10px">S07E14</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/51cdbd2611e844ece5d80878eb770436' video_title='S07E15' %} style="margin: 5px 0px 5px 10px">S07E15</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/a80bd9bf170ecc756d4ef302c4f0e712' video_title='S07E16' %} style="margin: 5px 0px 5px 10px">S07E16</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/36bedb6eb7152f39b16328448942822b' video_title='S07E17' %} style="margin: 5px 0px 5px 10px">S07E17</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/291dbc18539ba7e19b8abb7d85aa204e' video_title='S07E18' %} style="margin: 5px 0px 5px 10px">S07E18</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/715e8ba46f8bc29c24f3fbfdb8d96d71' video_title='S07E19' %} style="margin: 5px 0px 5px 10px">S07E19</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/2b1d520ee7fa77e7ff90488dcd7b3467' video_title='S07E20' %} style="margin: 5px 0px 5px 10px">S07E20</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/3ebc21c4e7f9d3d8c3e7bcbffcc3cad1' video_title='S07E21' %} style="margin: 5px 0px 5px 10px">S07E21</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/d85688fce613669775c5eef50f20386a' video_title='S07E22' %} style="margin: 5px 0px 5px 10px">S07E22</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/5c12a4bcabe8958990462298b5510893' video_title='S07E23' %} style="margin: 5px 0px 5px 10px">S07E23</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/4eb7d41ae6005f60fe401e56277ebd4e' video_title='S07E24' %} style="margin: 5px 0px 5px 10px">S07E24</a>
+</div>
+<div class="list-group" style="box-shadow: 2px 2px 5px #888888;"><div class="list-group-item active" style="background-color: #414E63; border-color: #414E63"><h4 class="list-group-item-heading">第08季</h4></div>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/788b4ac1e172d8e520c2b9461c0a3d35' video_title='S08E01' %} style="margin: 5px 0px 5px 10px">S08E01</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/aa475604668730af60a0a87cc92604da' video_title='S08E02' %} style="margin: 5px 0px 5px 10px">S08E02</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/7520fa31d14f45add6d61e52df5a03ff' video_title='S08E03' %} style="margin: 5px 0px 5px 10px">S08E03</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/f52a7b2610fb4d3f74b4106fb80b233d' video_title='S08E04' %} style="margin: 5px 0px 5px 10px">S08E04</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/f5c59267dae7d123f54b741a76f28f84' video_title='S08E05' %} style="margin: 5px 0px 5px 10px">S08E05</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/ed45e77e699645c84f3f27b7b5ad1e2d' video_title='S08E06' %} style="margin: 5px 0px 5px 10px">S08E06</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/524265e8b942930fbbe8a5d979d29205' video_title='S08E07' %} style="margin: 5px 0px 5px 10px">S08E07</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/20bcff97cc5fb24cbe58ebb037401bd9' video_title='S08E08' %} style="margin: 5px 0px 5px 10px">S08E08</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/6375f34725de10852675ac6ee7dc9e40' video_title='S08E09' %} style="margin: 5px 0px 5px 10px">S08E09</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/50698c07f91c611904a467b4892806a2' video_title='S08E10' %} style="margin: 5px 0px 5px 10px">S08E10</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/197e342c9fbad962dbe6d3322f723ca6' video_title='S08E11' %} style="margin: 5px 0px 5px 10px">S08E11</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/54963e5ec11d76db476ac1c915c76dbf' video_title='S08E12' %} style="margin: 5px 0px 5px 10px">S08E12</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/17737832ac17be5216f187a82c20936e' video_title='S08E13' %} style="margin: 5px 0px 5px 10px">S08E13</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/f376b8ae6217d18ca5ebcc8b402b63a1' video_title='S08E14' %} style="margin: 5px 0px 5px 10px">S08E14</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/cadc4583c983c78f9cb03ec0a7ddaf1f' video_title='S08E15' %} style="margin: 5px 0px 5px 10px">S08E15</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/a5c7b30fb632c92feb59154517223dc9' video_title='S08E16' %} style="margin: 5px 0px 5px 10px">S08E16</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/4d410063822cd9be28f86701c0bc3a31' video_title='S08E17' %} style="margin: 5px 0px 5px 10px">S08E17</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/d132c74defa34e9f47fd52b3dc69779c' video_title='S08E18' %} style="margin: 5px 0px 5px 10px">S08E18</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/b569502f473b890f9fcfc45b8a227baa' video_title='S08E19' %} style="margin: 5px 0px 5px 10px">S08E19</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/11aa8d2c762f3b0b56e9e9ed8d4015f0' video_title='S08E20' %} style="margin: 5px 0px 5px 10px">S08E20</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/cf091b3534ca65188b5785c193ca3a6a' video_title='S08E21' %} style="margin: 5px 0px 5px 10px">S08E21</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/33a854e247155d590883b93bca53848a' video_title='S08E22' %} style="margin: 5px 0px 5px 10px">S08E22</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/e1a0d53a534014217b7961d1870ee76b' video_title='S08E23' %} style="margin: 5px 0px 5px 10px">S08E23</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/cba4fab5fe82032158186944374bf5c0' video_title='S08E24' %} style="margin: 5px 0px 5px 10px">S08E24</a>
+</div>
+<div class="list-group" style="box-shadow: 2px 2px 5px #888888;"><div class="list-group-item active" style="background-color: #414E63; border-color: #414E63"><h4 class="list-group-item-heading">第09季</h4></div>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/dff70232bcd2396f4a6c7bb57dab3e87' video_title='S09E01' %} style="margin: 5px 0px 5px 10px">S09E01</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/5d4a18500f626b6a8cb05c1b3c4d095a' video_title='S09E02' %} style="margin: 5px 0px 5px 10px">S09E02</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/ddd808772c035aed516d42ad3559be5f' video_title='S09E03' %} style="margin: 5px 0px 5px 10px">S09E03</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/2e85d72295b67c5b649290dfbf019285' video_title='S09E04' %} style="margin: 5px 0px 5px 10px">S09E04</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/a6a71cb59c7579f7039912b62d92e2f1' video_title='S09E05' %} style="margin: 5px 0px 5px 10px">S09E05</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/e447193f2b83d789c98a82a7ef958736' video_title='S09E06' %} style="margin: 5px 0px 5px 10px">S09E06</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/7866731eed67dc3be9693b33f50fdb48' video_title='S09E07' %} style="margin: 5px 0px 5px 10px">S09E07</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/1eff77814e0b3238495a9f07d061703c' video_title='S09E08' %} style="margin: 5px 0px 5px 10px">S09E08</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/3f7c70f2a2831ebfb908d7d829f2e99d' video_title='S09E09' %} style="margin: 5px 0px 5px 10px">S09E09</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/1166cfff15f5aaabfc0f3803975991ae' video_title='S09E10' %} style="margin: 5px 0px 5px 10px">S09E10</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/373f32fe149adc95e1dae88d8993a678' video_title='S09E11' %} style="margin: 5px 0px 5px 10px">S09E11</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/728678f9db419eeaa3476663764e1456' video_title='S09E12' %} style="margin: 5px 0px 5px 10px">S09E12</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/1fcee5e040cf2cb786883eb2afd6f47f' video_title='S09E13' %} style="margin: 5px 0px 5px 10px">S09E13</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/f65854da4622c1f1ad4ffeb361d7703c' video_title='S09E14' %} style="margin: 5px 0px 5px 10px">S09E14</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/ac457ba972fb63b7994befc83f774746' video_title='S09E15' %} style="margin: 5px 0px 5px 10px">S09E15</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/e847d18006f6d945e8a9ee2f4d3e23f5' video_title='S09E16' %} style="margin: 5px 0px 5px 10px">S09E16</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/85a4413ecea7122bcc399cf0a53bba26' video_title='S09E17' %} style="margin: 5px 0px 5px 10px">S09E17</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/4e86eaf2685a67b743a475f86c7c0086' video_title='S09E18' %} style="margin: 5px 0px 5px 10px">S09E18</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/00db544eb12c05386ea51a6bff8803e7' video_title='S09E19' %} style="margin: 5px 0px 5px 10px">S09E19</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/1cfa81af29c6f2d8cacb44921722e753' video_title='S09E20' %} style="margin: 5px 0px 5px 10px">S09E20</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/18df51b97ccd68128e994804f3eccc87' video_title='S09E21' %} style="margin: 5px 0px 5px 10px">S09E21</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/76309eaf4f00ff4400a28da671b8ff91' video_title='S09E22' %} style="margin: 5px 0px 5px 10px">S09E22</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/6217b2f7e4634fa665d31d3b4df81b56' video_title='S09E23' %} style="margin: 5px 0px 5px 10px">S09E23</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/0913e2e6049a59306f85c213277a5253' video_title='S09E24' %} style="margin: 5px 0px 5px 10px">S09E24</a>
+</div>
+<div class="list-group" style="box-shadow: 2px 2px 5px #888888;"><div class="list-group-item active" style="background-color: #414E63; border-color: #414E63"><h4 class="list-group-item-heading">第10季</h4></div>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/6b8027f8d0ccac45349d84a80667a0bc' video_title='S10E01' %} style="margin: 5px 0px 5px 10px">S10E01</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/be629262dfba85e4814b3e74dee4a724' video_title='S10E02' %} style="margin: 5px 0px 5px 10px">S10E02</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/ede862db5ba2829c43eed59705e9bcdb' video_title='S10E03' %} style="margin: 5px 0px 5px 10px">S10E03</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/eeb358fcbf46e89566ad3fe0707820a0' video_title='S10E04' %} style="margin: 5px 0px 5px 10px">S10E04</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/e7e4a06cffd978919b99f0b17b10ad76' video_title='S10E05' %} style="margin: 5px 0px 5px 10px">S10E05</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/e23330785f499c128030ab1b7281f37a' video_title='S10E06' %} style="margin: 5px 0px 5px 10px">S10E06</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/ea67d66c5b01e5aa93fd5407f041b53d' video_title='S10E07' %} style="margin: 5px 0px 5px 10px">S10E07</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/ebc52c59616af7800f2beee546111646' video_title='S10E08' %} style="margin: 5px 0px 5px 10px">S10E08</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/0237a65a5396a6e4a6da6e1308ccc4e0' video_title='S10E09' %} style="margin: 5px 0px 5px 10px">S10E09</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/c1c6fff1643a3af5bd167488ff19012d' video_title='S10E10' %} style="margin: 5px 0px 5px 10px">S10E10</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/7fd3b80fb1884e2927df46a7139bb8bf' video_title='S10E11' %} style="margin: 5px 0px 5px 10px">S10E11</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/532a082cc38eaffa923d73bce41b4061' video_title='S10E12' %} style="margin: 5px 0px 5px 10px">S10E12</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/9af1b63534609a9c0068fef43dfb87e9' video_title='S10E13' %} style="margin: 5px 0px 5px 10px">S10E13</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/51ef70624ca791283ec434a52da0d4e2' video_title='S10E14' %} style="margin: 5px 0px 5px 10px">S10E14</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/5d541464ac15bfb8f0a537b010d13fa1' video_title='S10E15' %} style="margin: 5px 0px 5px 10px">S10E15</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/f365c0cee72aa186f5a6e0b174cfc256' video_title='S10E16' %} style="margin: 5px 0px 5px 10px">S10E16</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/8171ac2c5544a5cb54ac0f38bf477af4' video_title='S10E17' %} style="margin: 5px 0px 5px 10px">S10E17</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/acb55f9af76808c5fd5522dcdb519fde' video_title='S10E18' %} style="margin: 5px 0px 5px 10px">S10E18</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/0f83556a305d789b1d71815e8ea4f4b0' video_title='S10E19' %} style="margin: 5px 0px 5px 10px">S10E19</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/7570284063f2de77ff3145e5f321f2c5' video_title='S10E20' %} style="margin: 5px 0px 5px 10px">S10E20</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/115c51eb37365df2d4f4e2482b964822' video_title='S10E21' %} style="margin: 5px 0px 5px 10px">S10E21</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/8fcd9e5482a62a5fa130468f4cf641ef' video_title='S10E22' %} style="margin: 5px 0px 5px 10px">S10E22</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/4c9c3070235a7af934be4e46215c0cbc' video_title='S10E23' %} style="margin: 5px 0px 5px 10px">S10E23</a>
+<a class ="btn btn-flat btn-h" href={% url 'video_info' video_url='http://youku.com-www-163.com/share/886ad506e0c115cf590d18ebb6c26561' video_title='S10E24' %} style="margin: 5px 0px 5px 10px">S10E24</a>
+</div>
+{% endblock %}
+

@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+{% block title %}文章列表{% endblock %}
+{% block inner-title %}文章列表{% endblock %}
+{% block article_activate %}active-menu{% endblock %}
+{% block home_activate %}{% endblock %}
+{% block content %}
+<div class="blog">
+	<br/>
+ 	{% regroup articles by kind as kind_list %}
+ 	{% for kind in kind_list %}
+ 	<div class="list-group" style="box-shadow: 2px 2px 5px #888888;">
+     	<a class="list-group-item active" style="background-color: #414E63; border-color: #414E63">
+    		<h4 class="list-group-item-heading">
+        	{{ kind.grouper }}
+    		</h4>
+    	</a>
+    	{% for article in kind.list %}
+    	<a href="{% url 'article-details' article.id %}" class="list-group-item">
+       	<h4 class="list-group-item-heading">
+        	{{ article.title }}
+        </h4>
+        <p class="list-group-item-text">
+            {{ article.date }}
+        </p>
+    </a>
+    {% endfor %}
+</div>
+{% endfor %}
+{% endblock %}

@@ -20,5 +20,5 @@ urlpatterns = [
 	url(r'^tags/$', views.article_tags),
     url(r'^(\d+)/$', views.article_details, name='article-details'),
 	url(r'^(\d+)/comment/$', views.article_comments, name='article-comment'),
-    url(r'^(.*)/$', views.article_list, name='article-list'),
+    url(r'^category/(.*)/$', views.article_list, name='article-list'),
 ]

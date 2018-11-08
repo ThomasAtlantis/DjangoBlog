@@ -1,11 +1,11 @@
 {% extends 'index.html' %}
 {% block title %}电子书{% endblock %}
-{% block inner-title %}电子书{% endblock %}
 {% block e_book_activate %}active-menu{% endblock %}
 {% block home_activate %}{% endblock %}
 {% block content %}
-<div class="blog">
-	<br/>
+<div class="card" style="margin: unset;">
+	<h1 class="page-header" style="text-align: center">电子书</h1>
+</div>
 	{% regroup e_books by kind as kind_list %}
 	{% for kind in kind_list %}
 	<div class="list-group" style="box-shadow: 2px 2px 5px #888888;">
@@ -26,5 +26,4 @@
 		{% endfor %}
 	</div>
 	{% endfor %}
-</div>
 {% endblock %}		

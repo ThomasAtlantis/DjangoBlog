@@ -26,6 +26,69 @@
 	.top-navbar	{margin: -60px 0 0;}
 	#page-wrapper {min-height: 100%; position: unset;}
 	.collapse {display: unset;}
+	.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	    margin-top: unset;
+    	margin-bottom: unset;
+		padding-top: unset;
+		padding-bottom: 10px;
+		font-weight: 50;
+	}
+	p {
+		font-size: 16px;
+		padding: unset;
+		padding-top: 10px;
+	}
+	hr {
+		height: 1px;
+		border: 0;
+		border-top: 1px solid #ccc;
+	}
+	blockquote {
+		font-style: italic;
+	}
+	ul:not(.browser-default) {
+    	padding-left: 30px;
+	}
+	ul:not(.browser-default) li {
+	    list-style-type: disc;
+	}
+	ol {
+		padding-left: 25px;
+	}
+	table {
+		margin-bottom: 16px;
+	}
+	th {
+        border-left-color: rgb(221, 221, 221);
+        border-left-style: solid;
+        border-left-width: 1px;
+        border-right-color: rgb(221, 221, 221);
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-top-color: rgb(221, 221, 221);
+        border-top-style: solid;
+        border-top-width: 1px;
+        line-height: 22.4px;
+        padding-bottom: 6px;
+        padding-left: 13px;
+        padding-right: 13px;
+        padding-top: 6px;
+	}
+	td {
+        border-bottom-color: rgb(221, 221, 221);
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-left-color: rgb(221, 221, 221);
+        border-left-style: solid;
+        border-left-width: 1px;
+        border-right-color: rgb(221, 221, 221);
+        border-right-style: solid;
+        border-right-width: 1px;
+        padding-bottom: 6px;
+        padding-left: 13px;
+        padding-right: 13px;
+        padding-top: 6px;
+    }
 </style>
     <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
@@ -84,23 +147,13 @@
                         <a href="/mail" class="{% block contact_activate%}{% endblock %} waves-effect waves-dark"><i class="glyphicon glyphicon-envelope"></i> Contact Me</a>
                 </ul>
             </div>
-        </nav>
-      
+        </nav> 
 		<div id="page-wrapper">
-			<div class="header"> 
-                <h1 class="page-header" style="text-align: center">
-                	{% block inner-title %}Welcome to my website!{% endblock %}
-                </h1>
-			</div>
-			<div class="page-content" style="padding-left: 1%;padding-right: 1%;">
+			<div style="padding-left: 1%;padding-right: 1%; padding-bottom: 10px; padding-top: 10px;">
 			{% block content %}
-			<div class="blog">
-				<br/>
-				<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537332745417&di=f628118c0beee549f5562cd100a445c0&imgtype=0&src=http%3A%2F%2Fcdn2.scratch.mit.edu%2Fget_image%2Fgallery%2F1415516_170x100.png" width="100%">
-			</div>
 			{% endblock %}
 			</div>
-    </div>
+    	</div>
     <script src="/static/blog_new/assets/js/jquery-1.10.2.js"></script>
     <script src="/static/blog_new/assets/js/bootstrap.min.js"></script>
 	<script src="/static/blog_new/assets/materialize/js/materialize.min.js"></script>

@@ -32,4 +32,5 @@ urlpatterns = [
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
     url(r'^admin/uploads/(?P<dir_name>[^/]+)$', upload.upload_image, name='upload_image'),
 	url(r"^uploads/(?P<path>.*)$", 'django.views.static.serve', {"document_root": settings.MEDIA_ROOT}),
+	url(r'^captcha/', include('captcha.urls')),
 ]

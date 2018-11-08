@@ -7,6 +7,9 @@ from Category.models import Category
 from Tag.models import Tag
 from comments.models import Comments
 from .forms import CommentForm
+import markdown
+from captcha.models import CaptchaStore  
+from captcha.helpers import captcha_image_url  
 # Create your views here.
 
 def get_cate():
@@ -28,7 +31,16 @@ def article_list(request, cate_name):
 
 def article_details(request, id):
 	article = Article.objects.get(id=id)
+	if not article.editor_type:
+		article.body = markdown.markdown(article.body,
+                                  extensions=[
+                                     'markdown.extensions.extra',
+                                     'markdown.extensions.codehilite',
+                                     'markdown.extensions.toc',
+                                  ])
 	categorys = get_cate()
+	hashkey = CaptchaStore.generate_key()
+	image_url = captcha_image_url(hashkey)
 	form = CommentForm()
 	comment_list = article.comments_set.all()
 	return render(request, "articles/article_details.html", locals())
@@ -54,7 +66,14 @@ def article_tags(request):
 def article_comments(request, id):
 	article = Article.objects.get(id=id)
 	categorys = get_cate()
-	if request.method == 'POST':
+	if request.is_ajax():
+		hashkey = CaptchaStore.generate_key()
+		context = {
+			'hashkey': hashkey,
+			'image_url': captcha_image_url(hashkey),
+		}
+		return render(request,'articles/article_details.html',context=context) 
+	elif request.method == 'POST':
 		form = CommentForm(request.POST)
 		if form.is_valid():
 			comment = Comments()
@@ -63,11 +82,13 @@ def article_comments(request, id):
 			comment.body = form.cleaned_data['body']
 			comment.save()
 		comment_list = article.comments_set.all().order_by('created_time')
+		hashkey = CaptchaStore.generate_key()
 		context = {
+			'hashkey': hashkey,
+			'image_url': captcha_image_url(hashkey),
             'article': article,
             'form': form,
             'comment_list': comment_list,
 			'categorys': categorys
         }
 		return render(request,'articles/article_details.html',context=context)
-	return render(request, "articles/article_details.html", {"article": article, "categorys": categorys})

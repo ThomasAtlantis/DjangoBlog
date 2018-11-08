@@ -1,6 +1,5 @@
 {% extends 'index.html' %}
 {% block title %}相册{% endblock %}
-{% block inner-title %}相    册{% endblock %}
 {% block gallery_activate %}active-menu{% endblock %}
 {% block home_activate %}{% endblock %}
 {% block content %}
@@ -23,9 +22,8 @@
 	<a class="play-pause"></a>
 	<ol class="indicator"></ol>
 </div>
-<div class="blog">
-<br/>
-</div>
+<div class="card" style="margin: unset;">
+<h1 class="page-header" style="text-align: center">相    册</h1>
 <div id="links" class="image-gallery">
 	{% if image_list %}
 	{% for image in image_list %}
@@ -38,6 +36,7 @@
 	</div>
 	{% endfor %}
 	{% endif %}
+</div>
 </div>
 <script src="/static/js/blueimp-gallery.min.js"></script>
 <script>

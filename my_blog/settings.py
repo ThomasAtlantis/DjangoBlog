@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['39.105.70.105', '172.16.252.95', '127.0.0.1', 'localhost', 'li
 INSTALLED_APPS = (
 	'bootstrap3',
 	'django_thumbs',
+	'captcha',
 	'django_admin_bootstrapped',
 	'django.contrib.admin',
     'django.contrib.auth',

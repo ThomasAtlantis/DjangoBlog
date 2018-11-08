@@ -1,12 +1,12 @@
 {% extends 'index.html' %}
 {% block title %}标签汇总{% endblock %}
-{% block inner-title %}标签汇总{% endblock %}
 {% block article_activate %}active-menu{% endblock %}
 {% block home_activate %}{% endblock %}
 {% block content %}
-<div class="blog">
+<div class="card" style="margin: unset;">
+	<h1 class="page-header" style="text-align: center">标签汇总</h1>
 	<br/>
-	<div class="container" style="padding-left: 0px">
+	<div class="container" style="padding-left: 15px">
 		<ul id="myTab" class="nav nav-pills" role='tablist'>
 			{% for tag in tags|slice:":10" %}
 			<li class="{% if tag.id == 1 %}active{% endif %}">

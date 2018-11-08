@@ -1,10 +1,10 @@
 {% extends 'index.html' %}
 {% block title %}文章归档{% endblock %}
-{% block inner-title %}文章归档{% endblock %}
 {% block article_activate %}active-menu{% endblock %}
 {% block home_activate %}{% endblock %}
 {% block content %}
-<div class="blog">
+<div class="card" style="margin: unset;">
+	<h1 class="page-header" style="text-align: center">文章归档</h1>
 	<br/>
     {% for article in articles %}
     <a href="{% url 'article-details' article.id %}" class="list-group-item">

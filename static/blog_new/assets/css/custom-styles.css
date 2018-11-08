@@ -586,9 +586,9 @@ line-height: 1.428571429;
    
 }
  @media(max-width:768px) {
-	#sideNav{
-	display:none;
-} 
+//	#sideNav{
+//	display:none;
+//} 
  #page-wrapper {
 position: relative;
 top: 59px;
@@ -604,9 +604,9 @@ display: block;
 padding-top: 14px;
 font-size: 19px;
 }
-#sideNav{
-	display:none;
-}
+//#sideNav{
+//	display:none;
+//}
 .panel-left {
   width: 85px;
   height: 85px; 
@@ -705,9 +705,9 @@ padding: 0 15px 0px 15px;
 }
  @media(max-width:768px) {
 	  
-	 .navbar-header {
-		background: #f44336;
-	}
+	// .navbar-header {
+	//	background: #f44336;
+	//}
 	.navbar-side {
 		z-index: 2;
 		position: fixed;

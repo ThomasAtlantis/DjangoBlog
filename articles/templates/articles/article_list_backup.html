@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+{% block title %}文章归档{% endblock %}
+{% block article_activate %}active-menu{% endblock %}
+{% block home_activate %}{% endblock %}
+{% block content %}
+<div class="card" style="margin: unset;">
+	<h1 class="page-header" style="text-align: center">文章归档</h1>
+	<br/>
+	<div class="page" style="padding-left: 30%">
+    	<div class="box">
+        	<ul class="event_list">
+            	{% for article in articles %}
+	            <li class="tl_li" style="list-style-type: none;">
+					<span class="glyphicon glyphicon-unchecked"> </span>
+    	            <span>{{ article.date }}</span>
+        	        <p style="padding-left: 100px;"><span><a href="{% url 'article-details' article.id %}">{{ article.title }}</a></span></p>
+	            </li>
+    	        {% endfor %}
+        	</ul>
+	        <div class="clearfix"></div>
+	    </div>
+	</div>
+	
+	{% if articles.paginator.num_pages > 1 %}
+	<div style="text-align: center">
+	<ul class="pagination">
+        {% if articles.has_previous %}
+			<li>
+            	<a href="?page={{ articles.previous_page_number }}" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+				</a>
+			</li>
+        {% endif %}
+        {% for pg in articles.paginator.page_range %}
+			{% if articles.number == pg %}
+				<li class="active"><a href="?page={{ pg }}">{{ pg }}</a></li>
+			{% else %}
+				<li><a href="?page={{ pg }}">{{ pg }}</a></li>
+			{% endif %}
+		{% endfor %}
+        {% if articles.has_next %}
+			<li>
+            	<a href="?page={{ articles.next_page_number }}" aria-label="Next">
+					<span aria-hidden="true">&raquo;</span>
+				</a>
+			</li>
+        {% endif %}
+    </ul>
+	</div>
+	{% endif %}
+</div>
+{% endblock %}

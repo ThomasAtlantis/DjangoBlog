@@ -9,8 +9,18 @@
 			<h4>{{ article.date }}</h4>
 			<br/>
 		</div>
+		<style> 
+			pre {
+				font-size: 16px;
+				color: white;
+				background-color: #1F2837;
+			}
+		</style>
 		{% if not article.editor_type %}
-		<link rel="stylesheet" href="/static/css/vs.css">
+		<!--
+		['manni', 'igor', 'lovelace', 'xcode', 'vim', 'autumn', 'abap', 'vs', 'rrt', 'native', 'perldoc', 'borland', 'arduino', 'tango', 'emacs', 'friendly', 'monokai', 'paraiso-dark', 'colorful', 'murphy', 'bw', 'pastie', 'rainbow_dash', 'algol_nu', 'paraiso-light', 'trac', 'default', 'algol', 'fruity']
+		-->
+		<link rel="stylesheet" href="/static/css/highlight/monokai.css">
 		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 		<span> {{ article.body | safe }} </span>
 		{% else %}

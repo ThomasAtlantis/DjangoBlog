@@ -4,44 +4,52 @@
 {% block home_activate %}{% endblock %}
 {% block content %}
 <div class="card" style="margin: unset;">
-	<h1 class="page-header" style="text-align: center">文章归档</h1>
-	<br/>
-    {% for article in articles %}
-    <a href="{% url 'article-details' article.id %}" class="list-group-item">
-       	<h4 class="list-group-item-heading">
-        	{{ article.title }}
-        </h4>
-        <p class="list-group-item-text">
-            {{ article.date }}
-        </p>
-    </a>
-    {% endfor %}
-	{% if articles.paginator.num_pages > 1 %}
-	<div style="text-align: center">
-	<ul class="pagination">
-        {% if articles.has_previous %}
-			<li>
-            	<a href="?page={{ articles.previous_page_number }}" aria-label="Previous">
-					<span aria-hidden="true">&laquo;</span>
-				</a>
-			</li>
-        {% endif %}
-        {% for pg in articles.paginator.page_range %}
-			{% if articles.number == pg %}
-				<li class="active"><a href="?page={{ pg }}">{{ pg }}</a></li>
-			{% else %}
-				<li><a href="?page={{ pg }}">{{ pg }}</a></li>
-			{% endif %}
-		{% endfor %}
-        {% if articles.has_next %}
-			<li>
-            	<a href="?page={{ articles.next_page_number }}" aria-label="Next">
-					<span aria-hidden="true">&raquo;</span>
-				</a>
-			</li>
-        {% endif %}
-    </ul>
-	</div>
-	{% endif %}
+    <h1 class="page-header" style="text-align: center">文章归档</h1>
+    <br/>
+    <div style="border-color: white;
+    border-left-color: #6D737C;
+    margin-left: 80px;
+    border-style: solid;">
+        <ul style="padding-left: 0;">
+            {% for year, v1 in articles %}
+			<p>
+				<span class="glyphicon glyphicon-record" style="margin-left: -13px; color: #233342; font-size: 24px"> </span>
+	    		<span style="font-size: 24px; font-family: 仿宋; font-weight: bold">{{ year }}年</span>
+			</p>
+                <ul style="padding: 0;">
+                {% for month, v2 in v1 %}
+                    <div class="panel panel-default" style="margin-right: 30px; margin-bottom: 30px;">
+                        <p class="panel-title" style="font-size: 20px">
+							<span class="glyphicon glyphicon-record" style="margin-left: -13px; color: #233342;"> </span>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ month }}">
+                                <span style="font-family: 仿宋; font-weight: bold">{{ month }}月</span>
+                            </a>
+                        </p>
+                        <div id="collapse{{ month }}" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                {% for article in v2 %}
+                                    <li class="tl_li" style="list-style-type: none; font-size: 20px; font-family: 仿宋; font-weight: bold">
+                                        <p style="font-size: 20px">
+										<span class="glyphicon glyphicon-heart-empty"> </span>
+										<span style="">{{ article.category }}</span>
+										<span style="color: #6D737C;"> {{ article.date }} </span>	
+										<a href="{% url 'article-details' article.id %}" style="color: black">
+											{{ article.title }}
+										</a>
+										</p>
+                                    </li>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                </ul>
+            {% endfor %}
+			<p>
+				<span class="glyphicon glyphicon-record" style="margin-left: -13px; font-size: 24px"> </span>
+				<span style="font-family: 仿宋; font-size: 24px; font-weight: bold">END</span>
+			</p>
+        </ul>
+    </div>
 </div>
 {% endblock %}

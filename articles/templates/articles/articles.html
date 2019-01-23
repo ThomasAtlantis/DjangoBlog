@@ -6,6 +6,7 @@
 <div class="card" style="margin: unset;">
 	<h1 class="page-header" style="text-align: center">{{ cate_name }}</h1>
 	<br/>
+	<div style="padding: 0 45px 45px 45px;">
     {% for article in articles %}
     <a href={% url 'article-details' article.id %} class="list-group-item">
        	<h4 class="list-group-item-heading">
@@ -16,6 +17,7 @@
         </p>
     </a>
     {% endfor %}
+	</div>
 	{% if articles.paginator.num_pages > 1 %}
 	<div style="text-align: center">
 	<ul class="pagination">

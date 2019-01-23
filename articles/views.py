@@ -9,7 +9,7 @@ from comments.models import Comments
 from .forms import CommentForm
 import markdown
 from captcha.models import CaptchaStore  
-from captcha.helpers import captcha_image_url  
+from captcha.helpers import captcha_image_url
 # Create your views here.
 
 def get_cate():
@@ -28,6 +28,9 @@ def article_list(request, cate_name):
 	except EmptyPage:
 		articles = paginator.page(paginator.num_pages)
 	return render(request, "articles/articles.html", {"articles": articles, "categorys": categorys, "cate_name": cate_name})
+
+
+
 
 def article_details(request, id):
 	article = Article.objects.get(id=id)
@@ -48,14 +51,10 @@ def article_details(request, id):
 def article_all(request):
 	article_tmp = Article.objects.all().order_by('-date')
 	categorys = get_cate()
-	paginator = Paginator(article_tmp, 20)
-	page = request.GET.get('page')
-	try:
-		articles = paginator.page(page)
-	except PageNotAnInteger:
-		articles = paginator.page(1)
-	except EmptyPage:
-		articles = paginator.page(paginator.num_pages)
+	articles = {}
+	for article in article_tmp:                                                                      	
+		articles.setdefault(article.date.year, {}).setdefault(article.date.month, []).append(article)
+	articles = sorted([[y, sorted(a.items(), key=lambda d1: d1[0], reverse=True)] for  y, a in  articles.items()], key=lambda d2: d2[0], reverse=True)
 	return render(request, "articles/article_list.html", {"articles": articles, "categorys": categorys})
 
 def article_tags(request):

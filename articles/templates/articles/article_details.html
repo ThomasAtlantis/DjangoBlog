@@ -3,10 +3,12 @@
 {% block article_activate %}active-menu{% endblock %}
 {% block home_activate %}{% endblock %}
 {% block content %}
+<div>
+<div class="article_detail" id="article_detail" style="margin-right: 260px;">
 	<div class="card" style="padding: 20px; margin: unset;">
-		<h1 class="page-header" style="text-align: center">{{ article.title }}</h1>
+		<h1 class="page-header" style="text-align: center; font-family: 宋体">{{ article.title }}</h1>
 		<div class="gallery-head">
-			<h4>{{ article.date }}</h4>
+			<h4 style="font-family: 宋体">{{ article.date }}</h4>
 			<br/>
 		</div>
 		<style> 
@@ -119,6 +121,16 @@
     div#postcomments {
     	margin-top: 20px;
     }
+	.target-fix {
+    	position: relative;
+	    top: -65px;
+    	display: block;
+	    height: 0;
+    	overflow: hidden;
+	}
+	.md-list {
+		list-style-type: disc;
+	}
     </style>
 	<div class="card" style="padding: 20px;">
     	<div class="title" id="comment">
@@ -161,6 +173,28 @@
 			</ol>
     	</div>
     </div>
+</div>
+<div class="mulu" style="width: 250px; display: block;position: fixed;top: 65px;right: 10px;">
+	<div class="card">
+		<div class="mulu-title" style="
+	height: 40px;
+    line-height: 40px;
+    padding-left: 26px;
+    border-left: 4px solid #ebecec;
+    background-color: #1F2837;
+    color: white;
+    font-family: 华文中宋;
+    font-weight: bold;
+    font-size: 18px;">
+			本文目录
+		</div>
+		<div class="mulu-content" style="
+    padding-top: 15px; line-height: 1.7;">
+			{{ toc|safe }}
+		</div>
+	</div>
+</div>
+</div>
 	<script type="text/javascript" src="/static/js/jquery-1.11.1.min.js"></script>
 	<script>
 		function myFunction(){

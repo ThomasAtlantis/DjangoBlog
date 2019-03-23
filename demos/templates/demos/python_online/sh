@@ -1,0 +1,2 @@
+su - foo <<EOF
+python tmp.py;

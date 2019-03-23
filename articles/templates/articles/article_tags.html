@@ -4,19 +4,19 @@
 {% block home_activate %}{% endblock %}
 {% block content %}
 <div class="card" style="margin: unset;">
-	<h1 class="page-header" style="text-align: center">标签汇总</h1>
+	<h1 class="page-header" style="text-align: left; font-family: 宋体; padding-left: 45px">标签汇总</h1>
 	<br/>
-	<div class="container" style="padding-left: 15px">
-		<ul id="myTab" class="nav nav-pills" role='tablist'>
-			{% for tag in tags|slice:":10" %}
+	<div class="" style="padding-left: 15px; width=100%;">
+		<ul id="myTab" class="nav nav-pills" role='tablist' style="padding-right: 30px;">
+			{% for tag in tags|slice:":20" %}
 			<li class="{% if tag.id == 1 %}active{% endif %}">
 				<a href="#{{tag.id}}" data-toggle="tab">{{ tag.name }}({{tag.num_posts}})</a>
 			</li>
 			{% endfor %}
-			{% if tags|length > 10 %}
+			{% if tags|length > 20 %}
 			<li class="dropdown">
 				<a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown"> ... <b class="caret"></b></a>
-				<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+				<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" style="padding-left: 0px;">
 					{% for tag in tags|slice:"10:" %}
 					<li><a href="#{{tag.id}}" data-toggle="tab">{{ tag.name }}({{tag.num_posts}})</a></li>  
                     {% endfor %}
@@ -31,7 +31,7 @@
 		}
 	</style>
 	<br/>
-	<div id="myTabContent" class="tab-content" style="padding: 0 45px 45px 45px;">
+	<div id="myTabContent" class="tab-content" style="padding: 0 45px 45px 45px; font-family: 华文中宋;">
 		{% for tag in tags %}
 		<div class="tab-pane fade {% if tag.id == 1 %}in active{% endif %}" id="{{tag.id}}">
 			{% for article in tag.tag_articles.all %}

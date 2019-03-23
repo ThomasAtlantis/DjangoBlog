@@ -28,9 +28,12 @@ urlpatterns = [
 	url(r'^films/', include('films.urls')),
     url(r'^short-codes/', view.short_codes),
     url(r'^mail/', view.mail),
+	url(r'^demos/', include('demos.urls')),
     url(r'^articles/', include('articles.urls')),
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
     url(r'^admin/uploads/(?P<dir_name>[^/]+)$', upload.upload_image, name='upload_image'),
 	url(r"^uploads/(?P<path>.*)$", 'django.views.static.serve', {"document_root": settings.MEDIA_ROOT}),
 	url(r'^captcha/', include('captcha.urls')),
 ]
+handler404 = view.page_not_found
+handler500 = view.page_error

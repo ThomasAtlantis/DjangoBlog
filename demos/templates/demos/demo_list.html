@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+{% block title %}在线应用{% endblock %}
+{% block demo_activate %}active-menu{% endblock %}
+{% block home_activate %}{% endblock %}
+{% block content %}
+{% for demo in demos %}
+<div class="demo_card">
+	<div class="demo_icon">
+		<a href="{{demo.href}}" target=new><img class="icon" src="{{ demo.icon.url }}" width="80px" height="80px"/></a>
+	</div>
+    <div class="demo_name">{{ demo.name }}</div>
+</div>
+<style>
+.demo_card {
+	width: 140px;
+	height: 140px;
+	padding: 20px;
+	display: inline-block;
+}
+.demo_icon {
+	text-align: center;
+}
+.icon {
+	border: 1px solid #696;
+	border-color: black;
+	border-radius: 15px;
+	box-shadow: #666 0px 0px 10px;
+	background: #EEFF99;
+}
+.demo_name {
+	margin-top: 10px;
+	font-family: "Microsoft Yahei";
+	text-align: center;
+}
+</style>
+{% endfor %}
+{% endblock %}

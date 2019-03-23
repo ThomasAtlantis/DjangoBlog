@@ -3,26 +3,41 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
-	<meta name="baidu-site-verification" content="npViNm5eab" />
-	<title>{% block title %}主页{% endblock %}</title> 
+	<title>{% block title %}亚特兰蒂斯{% endblock %}</title> 
+    <link rel="icon" href="http://liushangyu.xyz/uploads/photos/bitbug_favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="http://liushangyu.xyz/uploads/photos/bitbug_favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="/static/blog_new/assets/materialize/css/materialize.min.css" media="screen,projection" />
     <!-- Bootstrap Styles-->
     <link href="/static/blog_new/assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FontAwesome Styles-->
-    <link href="/static/blog_new/assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="/static/blog_new/assets/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Morris Chart Styles-->
     <link href="/static/blog_new/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
     <!-- Custom Styles-->
     <link href="/static/blog_new/assets/css/custom-styles.css" rel="stylesheet" />
     <!-- Google Fonts-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="/static/blog_new/assets/js/Lightweight-Chart/cssCharts.css"> 
+    <link rel="stylesheet" href="/static/blog_new/assets/js/Lightweight-Chart/cssCharts.css">
+	<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script> 
 </head>
 <body>
 <style>
 	html {height: 100%;}
 	body {height: 100%;}
+	::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+	background-color: #465369;
+	background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    }
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: #EDEDED;
+}
 	#wrapper {height: 100%; padding: 60px 0 0;}
 	.top-navbar	{margin: -60px 0 0;}
 	#page-wrapper {min-height: 100%; position: unset;}
@@ -49,9 +64,6 @@
 	}
 	ul:not(.browser-default) {
     	padding-left: 30px;
-	}
-	ul:not(.browser-default) li {
-	    list-style-type: disc;
 	}
 	ol {
 		padding-left: 25px;
@@ -95,74 +107,111 @@
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
                 <a class="navbar-brand waves-effect waves-dark" href="/index"><i class="large material-icons">track_changes</i> <strong>Atlantis</strong></a>
-				<div id="sideNav" href="">
+				<div id="sideNav">
 					<i class="material-icons dp48">toc</i>
 				</div>
             </div>
+			<div class="container-fluid">
+				<ul class="nav navbar-nav navbar-right">
+			      <li>
+					<a href="https://github.com/ThomasAtlantis" target=new style="padding-top: 12px;padding-bottom: 0px;">
+					<span class="fa fa-github" style="font-size: 40px;"></span></a>
+  				  </li>
+			    </ul>
+			</div>
         </nav>
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
+                <ul class="nav" id="main-menu" style="font-family: 华文中宋; font-size: 18px">
                     <li>
-                        <a class="{% block home_activate%}active-menu{% endblock %} waves-effect waves-dark" href="/index"><i class="glyphicon glyphicon-home"></i> Home</a>
+                        <a class="{% block home_activate%}active-menu{% endblock %} waves-effect waves-dark" href="/index"><i class="glyphicon glyphicon-home"></i>  网站首页</a>
                     </li>
                     <li>
                         <a class="{% block article_activate%}{% endblock %} waves-effect waves-dark">
-							<i class="glyphicon glyphicon-pencil"></i>
-								 Articles
-							<span class="fa arrow"></span>	
+							<i class="glyphicon glyphicon-pencil"></i>  我的文章<span class="fa arrow"></span>	
 						</a>
 						<ul class="nav nav-second-level collapse in" aria-expanded="true">
 							<style type="text/css">
+								.nav_article_list
+								{
+									padding-left: 20px;
+								}
 								.nav_article_list:hover
 								{
-									background-color:#1F2837
+									background-color: #1F2837;
+									padding-left: 30px;
 								}
 							</style>
 							<li class="nav_article_list">
-                                <a href="/articles/archive">文章归档</a>
+                                <a href="/articles/archive">  文章归档</a>
                             </li>
 							<li class="nav_article_list">
-								<a href="/articles/tags">标签汇总</a>
+								<a href="/articles/tags">  标签汇总</a>
 							</li>
 							{% block context %}
 						    {% for category in categorys %}
 							<li class="nav_article_list">
 								<a href="/articles/category/{{category.name}}">{{ category.name }}
-								<span class="badge badge-info right" style="background-color: #F44336">{{ category.num_posts }}</span></a>
+								<span class="badge badge-info right" style="background-color: #0595EE; color: #0E2861;">{{ category.num_posts }}</span></a>
 							</li>
 							{% endfor %}
 							{% endblock context %}
 						</ul>
                     </li>
 					<li>
-                        <a href="/e_books" class="{% block e_book_activate%}{% endblock %} waves-effect waves-dark"><i class="glyphicon glyphicon-book"></i> E-Books</a>
+                        <a href="/e_books" class="{% block e_book_activate%}{% endblock %} waves-effect waves-dark"><i class="glyphicon glyphicon-book"></i>  电子书籍</a>
                     </li>
                     <li>
-                        <a href="/photos" class="{% block gallery_activate%}{% endblock %} waves-effect waves-dark"><i class="glyphicon glyphicon-picture"></i> Gallery</a>
+                        <a href="/photos" class="{% block gallery_activate%}{% endblock %} waves-effect waves-dark"><i class="glyphicon glyphicon-picture"></i>  图片资料</a>
                     </li>
 					<li>
-                        <a href="/films" class="{% block film_activate%}{% endblock %} waves-effect waves-dark"><i class=    "glyphicon glyphicon-film"></i> Videos</a>
+                        <a href="/films" class="{% block film_activate%}{% endblock %} waves-effect waves-dark"><i class=    "glyphicon glyphicon-film"></i>  视频资料</a>
                     </li>
+					<li>
+						<a href="/demos" class="{% block demo_activate%}{% endblock %}"><i class="fa fa-flask" style="font-size: 16px;"></i>  在线应用</a>
+					</li>
                     <li>
-                        <a href="/mail" class="{% block contact_activate%}{% endblock %} waves-effect waves-dark"><i class="glyphicon glyphicon-envelope"></i> Contact Me</a>
+                        <a href="/mail" class="{% block contact_activate%}{% endblock %} waves-effect waves-dark"><i class="glyphicon glyphicon-envelope"></i>  关于作者</a>
                 </ul>
             </div>
         </nav> 
 		<div id="page-wrapper">
-			<div style="padding-left: 1%;padding-right: 1%; padding-bottom: 10px; padding-top: 10px;">
+			<div class="sub-wrapper" style="padding-left: 1%;padding-right: 1%; padding-bottom: 10px; padding-top: 10px;">
 			{% block content %}
-			<div class="card" style="margin: unset;">
+			<style>
+				#page-wrapper {height: 100%;}
+				.sub-wrapper {height: 100%;}
+			</style>
+			<div class="row" style="margin: inherit; height: 100%;">
+			<div class="col-md-4" style="margin: unset; background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552156776409&di=10a9d6b9531489bbdf6eeb75fd81c92b&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20181208%2Ff367bb47e0ac456da5163791069d8199.jpeg);background-position:15% 0%; height: 100%;">
+				<div class="" style="padding: 60px">
+					<span style="text-align: center; font-size: 15px; font-family: raleway; color: white">Dear visitor</span>
+					<hr />
+					<h1 style="text-align: center; font-size: 32px; font-weight: 500; font-family: raleway; color: white">Weclome to</h1><h1 style="text-align: center; font-size: 32px; font-weight: 500; font-family: raleway; color: white">the Atlantis!</h1>
+					</br>
+					</br>
+				</div>
+			</div>
+			<div class="col-md-8 card" style="text-align: left; height: 100%; margin: 0px;">
+				<h3 style="padding: 40px 40px 0px 40px; font-family: 宋体;">近期推荐好文</h3>
+				<div style="padding: 40px">
+					<font face="宋体" size="3"><br><strong><a href="http://liushangyu.xyz/articles/24/" title="Linux上的一些小Trick，不定期更新">Linux上的一些小Trick，不定期更新</a></strong><br>2019年2月14日 13:23<br><br><strong><a href="http://liushangyu.xyz/articles/22/" title="Sampled Softmax">Sampled Softmax</a></strong><br>2019年2月12日 05:22<br><br><strong><a href="http://liushangyu.xyz/articles/21/" title="Textsum 运行录">Textsum 运行录</a></strong><br>2019年1月28日 08:32<br><br><strong><a href="http://liushangyu.xyz/articles/19/" title="编写扩展的Difflib工具解决病句错误标注问题">编写扩展的Difflib工具解决病句错误标注问题</a></strong><br>2019年1月25日 01:24<br><br><strong><a href="http://liushangyu.xyz/articles/17/" title="基于STM32的线性CCD舵机循迹智能车的研究与探索">基于STM32的线性CCD舵机循迹智能车的研究与探索</a></strong><br>2018年12月17日 13:42<br><br><strong><a href="http://liushangyu.xyz/articles/15/" title="递归法求解算术表达式">递归法求解算术表达式</a></strong><br>2018年11月16日 11:52<br><br><strong><a href="http://liushangyu.xyz/articles/9/" title="基于STM32控制的舵机车循迹的研究及相关问题">基于STM32控制的舵机车循迹的研究及相关问题</a></strong><br>2018年10月4日 14:14<br></font>
+				</div>
+			</div>
 			</div>
 			{% endblock %}
 			</div>
     	</div>
-    <script src="/static/blog_new/assets/js/jquery-1.10.2.js"></script>
-    <script src="/static/blog_new/assets/js/bootstrap.min.js"></script>
-	<script src="/static/blog_new/assets/materialize/js/materialize.min.js"></script>
+    <!--script src="/static/blog_new/assets/js/jquery-1.10.2.js"></script-->
+    <!--script src="/static/blog_new/assets/js/bootstrap.min.js"></script-->
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<!--script src="/static/blog_new/assets/materialize/js/materialize.min.js"></script-->
+	<script src="https://cdn.bootcss.com/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script src="/static/blog_new/assets/js/jquery.metisMenu.js"></script>
-    <script src="/static/blog_new/assets/js/morris/raphael-2.1.0.min.js"></script>
-    <script src="/static/blog_new/assets/js/morris/morris.js"></script>
+    <!--script src="/static/blog_new/assets/js/morris/raphael-2.1.0.min.js"></script-->
+	<script src="https://cdn.bootcss.com/raphael/2.1.0/raphael-min.js"></script>
+    <!--script src="/static/blog_new/assets/js/morris/morris.js"></script-->
+	<script src="https://cdn.bootcss.com/morris.js/0.5.1/morris.js"></script>
 	<script src="/static/blog_new/assets/js/easypiechart.js"></script>
 	<script src="/static/blog_new/assets/js/easypiechart-data.js"></script>
 	<script src="/static/blog_new/assets/js/Lightweight-Chart/jquery.chart.js"></script>

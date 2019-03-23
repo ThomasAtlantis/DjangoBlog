@@ -18,3 +18,9 @@ def short_codes(request):
 def mail(request):
 	categorys = Category.objects.annotate(num_posts=Count('article'))
 	return render(request, 'mail.html', {'categorys': categorys})
+
+def page_not_found(request):
+	return render(request, '404.html')
+
+def page_error(request):
+	return render(request, '500.html')

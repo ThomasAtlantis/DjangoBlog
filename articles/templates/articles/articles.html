@@ -4,11 +4,11 @@
 {% block home_activate %}{% endblock %}
 {% block content %}
 <div class="card" style="margin: unset;">
-	<h1 class="page-header" style="text-align: center">{{ cate_name }}</h1>
+	<h1 class="page-header" style="text-align: left; font-family: 宋体; padding-left: 45px">>> {{ cate_name }}</h1>
 	<br/>
 	<div style="padding: 0 45px 45px 45px;">
     {% for article in articles %}
-    <a href={% url 'article-details' article.id %} class="list-group-item">
+    <a href={% url 'article-details' article.id %} class="list-group-item" style="font-family: 华文中宋;">
        	<h4 class="list-group-item-heading">
         	{{ article.title }}
         </h4>

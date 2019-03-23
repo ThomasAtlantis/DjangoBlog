@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'w^_72$d(=$0g)0wr9%#4rc%+74&7-+j-7_@)4=6ip__l6udxyo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['39.105.70.105', '172.16.252.95', '127.0.0.1', 'localhost', 'liushangyu.xyz', 'www.liushangyu.xyz']
 
@@ -49,6 +49,7 @@ INSTALLED_APPS = (
 	'films',
 	'Category',
 	'comments',
+	'demos',
 )
 
 MIDDLEWARE_CLASSES = (
